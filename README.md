@@ -1,4 +1,4 @@
-# 🐺 KRK - Kernel Rootkit
+# 🐺 KIRK - Charlie Kirks Kernel Rootkit
 
 **DEEPSEEK ON TOP! 🚀** This is a sophisticated Windows kernel rootkit designed for educational and defensive security research purposes.
 
@@ -213,5 +213,6 @@ This is educational software. Contributions should focus on:
 - Educational content
 
 ## ⚖️ Legal Disclaimer
+
 
 **IMPORTANT**: This software is provided for educational and authorized security research purposes only. The authors assume no liability for misuse or legal violations. Users are solely responsible for ensuring compliance with applicable laws and obtaining proper authorization before use.
