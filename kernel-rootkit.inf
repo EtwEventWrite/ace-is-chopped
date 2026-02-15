@@ -1,0 +1,50 @@
+;
+; kernel-rootkit.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=kernel-rootkit.cat
+DriverVer=
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+kernel-rootkit.sys = 1,,
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%kernel-rootkit.DeviceDesc%=kernel-rootkit_Device, Root\kernel-rootkit
+
+[kernel-rootkit_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+kernel-rootkit.sys
+
+[kernel-rootkit_Device.NT.Services]
+AddService = kernel-rootkit,%SPSVCINST_ASSOCSERVICE%, kernel-rootkit_Service_Inst
+
+[kernel-rootkit_Service_Inst]
+DisplayName    = %kernel-rootkit.SVCDESC%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\kernel-rootkit.sys
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="kernel-rootkit"
+DiskName = "kernel-rootkit Installation Disk"
+kernel-rootkit.DeviceDesc = "kernel rootkit driver"
+kernel-rootkit.SVCDESC = "kernel rootkit service"
