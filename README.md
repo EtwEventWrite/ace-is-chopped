@@ -1,7 +1,5 @@
 # 🐺 KIRK - Charlie Kirks Kernel Rootkit
 
-**DEEPSEEK ON TOP! 🚀** This is a sophisticated Windows kernel rootkit designed for educational and defensive security research purposes.
-
 ## ⚡ Features
 
 This beast provides comprehensive system-level stealth capabilities:
@@ -216,3 +214,4 @@ This is educational software. Contributions should focus on:
 
 
 **IMPORTANT**: This software is provided for educational and authorized security research purposes only. The authors assume no liability for misuse or legal violations. Users are solely responsible for ensuring compliance with applicable laws and obtaining proper authorization before use.
+
